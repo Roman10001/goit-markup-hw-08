@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-07</title>
+    <title>goit-markup-hw-08</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -23,42 +23,51 @@
         <!-- Основная навигация -->
         <nav class="nav">
           <a class="logo link" href="./index.html"><span class="logo__text">Web</span>Studio</a>
-          <ul class="list nav__list">
-            <li class="nav__item">
-              <a class="link nav__link current" href="./index.html"> Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="link nav__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="link nav__link" href="#address">Контакты</a>
-            </li>
-          </ul>
+
+          <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
+            <svg class="menu-button__icon" height="40" width="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
+              <use class="icon-menu" href="./img/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-conteiner" data-menu>
+            <ul class="list nav__list">
+              <li class="nav__item">
+                <a class="link nav__link current" href="./index.html"> Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="link nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="link nav__link" href="#address">Контакты</a>
+              </li>
+            </ul>
+            <ul class="contacts list">
+              <li class="contacts__item">
+                <a class="contacts__link link" href="mailto:info@devstudio.com"
+                  ><svg class="contacts__icon" width="16" height="12">
+                    <use href="./img/sprite.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link link" href="tel:+380961111111"
+                  ><svg class="contacts__icon" width="10" height="16">
+                    <use href="./img/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./img/sprite.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="16">
-                <use href="./img/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-btn" data-modal-close>
-          <svg class="close-btn__icon" width="30" height="30">
+          <svg class="close-btn__icon" width="30" height="30" aria-label="Кнопка закрыть">
             <use href="./img/sprite.svg#icon-close"></use>
           </svg>
         </button>
@@ -177,15 +186,39 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="list work__list">
             <li class="item work__item">
-              <img src="./img/img1.png" alt="Програмист за работой" width="370" height="294" />
+              <picture>
+                <source srcset="./img/work/img1.webp 1x, ./img/work/img1@2x.webp 2x" type="image/svg+xml" />
+                <img
+                  src="./img/work/img1.jpg x1, ./img/work/img1@2x.jpg x2,"
+                  alt="Програмист за работой"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="work__text">Десктопные приложения</p>
             </li>
             <li class="item work__item">
-              <img src="./img/img2.png" alt="Разработка приложений" width="370" height="294" />
+              <picture>
+                <source srcset="./img/work/img2.webp 1x, ./img/work/img2@2x.webp 2x" type="image/svg+xml" />
+                <img
+                  src="./img/work/img2.jpg x1, ./img/work/img2@2x.jpg x2,"
+                  alt="Разработка приложений"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="work__text">Мобильные приложения</p>
             </li>
             <li class="item work__item">
-              <img src="./img/img3.png" alt="Веб-дизайн" width="370" height="294" />
+              <picture>
+                <source srcset="./img/work/img3.webp 1x, ./img/work/img3@2x.webp 2x" type="image/svg+xml" />
+                <img
+                  src="./img/work/img3.jpg x1, ./img/work/img3@2x.jpg x2,"
+                  alt="Веб-дизайн"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="work__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -197,7 +230,18 @@
           <h2 class="title">Наша команда</h2>
           <ul class="list team__list">
             <li class="card">
-              <img src="./img/img2_4.jpg" alt="Игорь" width="270" />
+              <picture>
+                <source
+                  srcset="./img/team/450w/igor-450.webp 1x, ./img/team/450w/igor-450@2x.webp 2x"
+                  type="image/svg+xml"
+                />
+                <img
+                  src="./img/team/450w/igor-450.jpg 1x, ./img/team/450w/igor-450@2x.jpg 2x"
+                  alt="Игорь"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <h3 class="title card__title">Игорь Демьяненко</h3>
               <p class="card__text">Product Designer</p>
               <ul class="list card__list">
@@ -237,7 +281,18 @@
               </ul>
             </li>
             <li class="card">
-              <img src="./img/img2_1.jpg" alt="Ольга" width="270" />
+              <picture>
+                <source
+                  srcset="./img/team/450w/olga-450.webp 1x, ./img/team/450w/olga-450@2x.webp 2x"
+                  type="image/svg+xml"
+                />
+                <img
+                  src="./img/team/450w/olga-450.jpg 1x, ./img/team/450w/olga-450@2x.jpg 2x"
+                  alt="Ольга"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <h3 class="title card__title">Ольга Репина</h3>
               <p class="card__text">Frontend Developer</p>
               <ul class="list card__list">
@@ -272,7 +327,18 @@
               </ul>
             </li>
             <li class="card">
-              <img src="./img/img2_2.jpg" alt="Николай" width="270" />
+              <picture>
+                <source
+                  srcset="./img/team/450w/nikolai-450.webp 1x, ./img/team/450w/nikolai-450@2x.webp 2x"
+                  type="image/svg+xml"
+                />
+                <img
+                  src="./img/team/450w/nikolai-450.jpg 1x, ./img/team/450w/nikolai-450@2x.jpg 2x"
+                  alt="Николай"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <h3 class="title card__title">Николай Тарасов</h3>
               <p class="card__text">Marketing</p>
               <ul class="list card__list">
@@ -307,7 +373,18 @@
               </ul>
             </li>
             <li class="card">
-              <img src="./img/img2_3.jpg" alt="Михаил" width="270" />
+              <picture>
+                <source
+                  srcset="./img/team/450w/mihail-450.webp 1x, ./img/team/450w/mihail-450@2x.webp 2x"
+                  type="image/svg+xml"
+                />
+                <img
+                  src="./img/team/450w/mihail-450.jpg 1x, ./img/team/450w/mihail-450@2x.jpg 2x"
+                  alt="Михаил"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <h3 class="title card__title">Михаил Ермаков</h3>
               <p class="card__text">UI Designer</p>
               <ul class="list card__list">
@@ -459,7 +536,7 @@
           <form class="mail">
             <label class="mail__field">
               <input type="email" name="mail" class="mail__input" placeholder=" " />
-              <samp class="mail__label">E-mail </samp>
+              <samp class="mail__label">E-mail</samp>
             </label>
             <button type="submit" class="button submit">
               Подписаться
@@ -472,5 +549,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile.js"></script>
   </body>
 </html>
