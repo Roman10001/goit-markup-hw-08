@@ -10,8 +10,9 @@
 .galerry__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   @media screen and (max-width: 767px) {
-    justify-content: center;
+    justify-content: start;
   }
 
   & + & {
