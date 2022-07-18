@@ -1,9 +1,19 @@
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin: -15px;
+    }
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__text {
@@ -23,10 +33,20 @@
 }
 
 .advantages__item {
-  width: 270px;
+  width: 100%;
 
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 120px) / 4);
+  }
   &:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 }
 

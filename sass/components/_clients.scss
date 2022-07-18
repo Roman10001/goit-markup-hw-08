@@ -1,24 +1,38 @@
 .clients {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
+
+.clients__item {
+  margin: 15px;
+  height: 90px;
+  width: calc((100% - 60px) / 2);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 90px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 180px) / 6);
+  }
 }
 
 .clients__box {
   display: flex;
   justify-content: center;
-}
-
-.clients__item:not(:last-child) {
-  margin-right: 30px;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 
-  width: 170px;
-  height: 90px;
   fill: $logo-company-color;
   border: 1px solid $logo-company-color;
   border-radius: 4px;
