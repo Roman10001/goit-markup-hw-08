@@ -1,4 +1,13 @@
-@import "./utils/variables";
-@import "./utils/visually-hidden";
-@import "./base/module";
-@import "./components/module";
+@import 'utils/variables';
+@import 'components/logo';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/modal';
+@import 'components/advantages';
+@import 'components/projects';
+@import 'components/teams';
+@import 'components/clients';
+@import 'components/footer';
+@import 'components/visually-hidden';
+@import 'components/filter';
+@import 'components/portfolio';

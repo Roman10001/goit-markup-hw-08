@@ -1,13 +1,46 @@
-$primary-text-color: #757575;
-$primary-bg-color: #ffffff;
-$secondary-bg-color: #f5f4fa;
-$footer-hero-bg-color: #2f303a;
-$title-link-color: #212121;
-$secondary-link-color: #757575;
-$accent-color: #2196f3;
-$logo-up-color: #000000;
-$logo-down-color: #ffffff;
-$address-color: #ffffff;
-$address-secondary-color: rgba(255, 255, 255, 0.6);
-$logo-company-color: #afb1b8;
-$border-color: #ececec;
+$color-link: #2196F3;
+$color-button: #188CE8;
+$color-logo: #000000;
+$color-main: #212121;
+$color-secondary: #757575;
+$color-hero: #ffffff;
+$bg-hero: #2F303A;
+$bg-section: #F5F4FA;
+$bg-footer: #2F303A;
+$icon-social: #AFB1B8;
+$header-border: #ECECEC;
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+  background-color: $color-hero;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 320px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
