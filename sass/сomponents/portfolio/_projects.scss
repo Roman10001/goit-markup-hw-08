@@ -1,0 +1,164 @@
+.projects-list {
+
+   // от 768 планшет и комп
+   @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+   }
+
+   // от 1200 только пк
+   @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+   }
+
+   // способ через флексы и гап
+   // @media screen and (max-width: 767px) {
+   //    display: flex;
+   //    justify-content: center;
+   //    flex-wrap: wrap;
+   //    gap: 30px;
+   // }
+
+   // ------ projects-list__item
+   &__item {
+
+
+      &:not(:last-child) {
+
+         // до 767 только телефон
+         @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+         }
+      }
+
+      // от 768 до 1199 только планшет
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         width: calc((100% - 60px) / 2);
+         margin: 15px;
+      }
+
+      // от 1200 только пк
+      @media screen and (min-width: 1200px) {
+         width: calc((100% - 90px) / 3);
+         margin: 15px;
+      }
+
+
+   }
+
+
+   // ------ projects-list__link
+   &__link {
+      display: inline-block;
+      text-decoration: none;
+
+      transition: box-shadow 250ms $timing-function;
+
+      &:hover,
+      &:focus {
+         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      }
+   }
+
+
+   // -------- projects-list__box
+   &__box {
+      position: relative;
+      z-index: -1;
+      overflow: hidden;
+   }
+
+
+   // -------- projects-list__img
+   &__img {
+      display: block;
+
+   }
+
+
+   // ------- projects-list__tip
+   &__tip {
+      position: absolute;
+      // width: 100%;
+      max-width: 100%;
+      height: 100%;
+      top: -99%;
+      left: 0;
+
+      display: flex;
+      align-items: center;
+
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 24px;
+      text-align: left;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.56;
+      letter-spacing: 0.03em;
+
+      background-color: $accent-hover-color;
+      color: $white-text-color;
+
+      opacity: 1;
+
+      transform: translateY(200%);
+
+      transition: transform 250ms $timing-function;
+
+      .projects-list__link:hover & {
+         transform: translateY(99%);
+      }
+
+
+
+      //  до 327 только телефон 
+      @media screen and (max-width: 353px) {
+         font-size: 14px;
+         line-height: 1.56;
+      }
+   }
+
+
+   // ------ projects-list__description
+   &__description {
+      padding: 20px 24px 20px 24px;
+
+      border-left: 1px solid $secondary-border-color;
+      border-right: 1px solid $secondary-border-color;
+      border-bottom: 1px solid $secondary-border-color;
+   }
+
+
+   // ------- projects-list__title
+   &__title {
+      margin-top: 0;
+      margin-bottom: 4px;
+
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: 0.06em;
+      text-align: left;
+
+      color: $secondary-text-color;
+   }
+
+
+   // ------- projects-list__text
+   &__text {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+
+      color: $main-text-color;
+   }
+}
